@@ -1,0 +1,5 @@
+file(GLOB_RECURSE SRCS "./*.c*" )
+foreach(src ${SRCS})
+    get_filename_component(program ${src} NAME_WE)
+    add_executable(${program} ${src})
+endforeach(src)
